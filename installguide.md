@@ -343,7 +343,7 @@ su - postgres -c "createdb -O awx awx"
 
 Migrate AWX data into the new database
 ```bash
-sudo -u awx /opt/awx/bin/awx-manage migrate
+sudo -u awx scl enable rh-python36 rh-postgresql10 "awx-manage migrate"
 ```
 
 Re-create the admin user, provision the instance and queues
